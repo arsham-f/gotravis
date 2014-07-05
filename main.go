@@ -20,6 +20,8 @@ func main() {
 
 	flag.Parse()
 
+	*target = fmt.Sprintf("%s/%s", *target, filepath.Base(*path))
+
 	required_env_keys := []string{
 		"ARTIFACTS_S3_BUCKET",
 		"ARTIFACTS_AWS_REGION",

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"launchpad.net/goamz/aws"
 	"launchpad.net/goamz/s3"
 )
@@ -22,6 +21,5 @@ func Init(key string, secret string, bucketname string, regionname string) {
 }
 
 func UploadFile(path string, data []byte, ctype string) error {
-	fmt.Printf("Putting to %s", path)
 	return bucket.Put(path, data, ctype, s3.Private)
 }

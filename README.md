@@ -1,0 +1,2 @@
+travis-artifacts for Go
+-----------
